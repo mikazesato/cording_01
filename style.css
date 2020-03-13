@@ -1,0 +1,121 @@
+@import url(sanitize.css);
+@import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+
+body {
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.container {
+    max-width: 800px;   /*最大幅を800pxに*/
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+header {
+    background-color: #422814;
+    padding: 10px;
+    color: #fff;
+}
+
+header h1 {
+    font-family: 'Sriracha', cursive;
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.description img {
+        float: left;
+        margin: 0 10px 10px 0;
+        transition: opacity 1s ease 0s;
+}
+
+.information h1 {
+    font-size: 18px; /*文字の大きさを　18pxに*/
+    margin: 0 10px 10px 0; /*余白を下と右に10pxずつ*/
+    float: left;
+}
+
+.information .type{
+    display: inline; /*インラインスタイルに変更*/
+    background-color: #E35A4D; /*背景色をピンクに*/
+    padding: 3px 5px;   /*要素内余白を上下3px、左右5pxに*/
+    font-size: 80%; /*文字の大きさを少し小さく*/
+    color: #FFF;    /*文字の色を白に*/
+}
+
+.description {
+    clear: left;
+}
+
+.content{
+    background-color: #fff; /*背景色を白に*/
+    padding: 20px;  /*要素内余白を20pxに*/
+}
+
+.songs{
+    margin: 0 0 20px;   /*下の余白を20px　に*/
+}
+
+.songs h2{
+    clear: left;
+    font-size: 100%;    /*フォントサイズを本文と同じ大きさに*/
+    font-weight: normal;    /*フォントの太さを通常通りに*/
+    margin: 0;  /*余白はなくす*/
+    background-color: #E6E4DD;  /*背景色を薄い茶色に*/
+    padding: 5px 10px; /*要素内の余白を上下5px、左右10pxに*/
+}
+
+.songs ol{
+    padding: 0; /*要素内の余白をなくす*/
+    margin: 0;  /*余白をなくす*/
+    list-style: decimal inside; /*リストのスタイルを算用数字に*/
+}
+
+.songs li{
+    border-bottom: 1px solid #ccc;  /*要素の下にのみ枠線をひく*/
+    width: 50%; /*要素の幅を50%に*/
+    float: left;    /*左に回り込み*/
+    padding: 5px 10px;  /*要素内余白を上下5px、左右10pxに*/
+}
+
+.clearfix:after{
+    content:" ";
+    display:table;
+    clear:both;
+}
+
+a {
+    color: #666;    /*文字色をグレーに*/
+}
+
+footer {
+    text-align: center;
+    font-size: 80%;
+}
+
+@media only screen and (max-width:600px){
+    .description img{
+        float: none;    /*回り込みを解除する*/
+        display: block; /*表示をブロック状態にする*/
+        margin: 0 auto; /*画像を中央揃えにする*/
+    }
+    header{
+        padding: 5px;   /*要素内余白を少し狭くする*/
+    }
+    header h1{
+        font-size: 12px;    /*文字サイズを少し小さくする*/
+    }
+    .songs li{
+        float: none;    /*回り込みを解除する*/
+        width: inherit; /*幅を元に戻す*/
+    }
+}
+
+.description img:hover{
+    opacity: .5;
+}
